@@ -73,11 +73,11 @@ public class MainController {
     }
 
     @PostMapping(path="/product")
-    public void addProduct(@RequestParam String productName) {
+    public void addProduct(@RequestParam String productName, @RequestParam int quantity) {
         ProductData product = new ProductData();
         product.setId(UUID.randomUUID().toString());
         product.setProductName(productName);
-        product.setProductQuantity(0);
+        product.setProductQuantity(quantity);
         productRepository.save(product);
     }
 
