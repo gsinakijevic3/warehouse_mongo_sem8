@@ -6,7 +6,6 @@ import warehouse.model.WarehouseData;
 import java.util.List;
 
 public interface WarehouseRepository extends MongoRepository<WarehouseData, String> {
-    List<WarehouseData> findByProductsProductName(String productName);
     List<WarehouseData> findByProductsId(String productId);
 
 }
