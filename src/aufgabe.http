@@ -1,0 +1,58 @@
+###
+POST http://localhost:8080/demo/warehouse?
+    name=TGM&
+    city=Wien&
+    postalCode=1200&
+    country=Austria
+
+    Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/demo/warehouse?
+    name=Thalia&
+    city=Wien&
+    postalCode=1070&
+    country=Austria
+
+    Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/demo/product?
+    warehouseId=bae2604a-ab2c-4344-b014-e75af6e2af34&
+    productName=Buch&
+    productQuantity=12400
+
+    Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/demo/product?
+    warehouseId=bae2604a-ab2c-4344-b014-e75af6e2af34&
+    productName=Stift&
+    productQuantity=590
+
+    Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/demo/product?
+    warehouseId=bae2604a-ab2c-4344-b014-e75af6e2af34&
+    productName=CD&
+    productQuantity=1700
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+###
+POST http://localhost:8080/demo/product?
+    warehouseId=bae2604a-ab2c-4344-b014-e75af6e2af34&
+    productName=Platte&
+    productQuantity=150
+
+    Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/demo/product?
+    warehouseId=bae2604a-ab2c-4344-b014-e75af6e2af34&
+    productName=Notizbuch&
+    productQuantity=320
+
+    Content-Type: application/x-www-form-urlencoded
