@@ -110,16 +110,15 @@ public class MainController {
         }
         productRepository.deleteById(productId);
     }
-    //TODO: auf ProductId aendern
-    @GetMapping("/stock/{productName}")
-    public int getStock(@PathVariable String productName) {
+    @GetMapping("/stock/{productId}")
+    public int getStock(@PathVariable String productId) {
 
 
-        List<WarehouseData> warehouses = warehouseRepository.findByProductsProductName(productName);
+        List<WarehouseData> warehouses = warehouseRepository.findByProductsId(productId);
         int totalQuantity = 0;
         for (WarehouseData warehouse : warehouses) {
             for (ProductData product : warehouse.getProducts()) {
-                if (product.getProductName().equals(productName)) {
+                if (product.getId().equals(productId)) {
                     totalQuantity += product.getProductQuantity();
                 }
             }
